@@ -33,7 +33,7 @@ var pusher = new Pusher({
       changeStream.on('change', (change) => {
           console.log(change);
 
-        //    if there a change save it at pusher
+        //    if there a change save it at pusher / channel called message and the event called inserted
           if (change.operationType === 'insert') {
               const messageDetails = change.fullDocument
               pusher.trigger('message', 'inserted',
