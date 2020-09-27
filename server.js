@@ -40,6 +40,8 @@ var pusher = new Pusher({
               {
                   name: messageDetails.name,
                   message: messageDetails.message,
+                  timestamp: messageDetails.timestamp,
+                  received: messageDetails.received
               })
           } else {
               console.log('Error Pusher');
